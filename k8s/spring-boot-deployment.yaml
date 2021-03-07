@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: spring-boot
+  template:
+    metadata:
+      labels:
+        component: spring-boot
+    spec:
+      containers:
+        - name: angular
+          image: inimeve/spring-boot-app
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
