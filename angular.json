@@ -68,7 +68,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "k8s-angular-app:build"
+            "browserTarget": "k8s-angular-app:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
