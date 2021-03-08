@@ -8,7 +8,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /?(.*)
+          - path: /angular-app/?(.*)
             pathType: Prefix
             backend:
               serviceName: angular-cluster-ip-service

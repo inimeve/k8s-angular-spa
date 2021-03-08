@@ -11,4 +11,5 @@ RUN npm run build
 
 ### Create image ###
 FROM nginx:1.19.7-alpine as build-image
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build-app /app/dist/k8s-angular-app /usr/share/nginx/html
